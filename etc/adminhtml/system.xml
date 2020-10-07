@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © ITYetti
+ * Open Software License (OSL 3.0)
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="ityetti" translate="label" sortOrder="10">
+            <label>ITYetti Extension</label>
+        </tab>
+        <section id="rotate_view" translate="label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Rotate 360 View</label>
+            <tab>ityetti</tab>
+            <resource>ITYetti_Rotate::rotate_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0"
+                   showInStore="0">
+                <label>General</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0"
+                       showInStore="0">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>ityetti/rotate_view/enable</config_path>
+                    <comment>Select "Yes" if you want to enable the module</comment>
+                </field>
+                <field id="width" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Width</label>
+                    <config_path>ityetti/rotate_view/width</config_path>
+                    <comment>The width of the image</comment>
+                </field>
+                <field id="height" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Height</label>
+                    <config_path>ityetti/rotate_view/height</config_path>
+                    <comment>The height of the image</comment>
+                </field>
+                <field id="frame_time" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Frame Time</label>
+                    <config_path>ityetti/rotate_view/frame_time</config_path>
+                    <comment>Time in ms between updates. 40 is exactly 25 FPS</comment>
+                </field>
+                <field id="frames" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Frames</label>
+                    <config_path>ityetti/rotate_view/frames</config_path>
+                    <comment>Total number of frames</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
