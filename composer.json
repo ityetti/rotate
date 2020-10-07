@@ -1,0 +1,20 @@
+{
+    "name": "ityetti/rotate",
+    "description": "A Magento 2 module that implementing rotate 360 view",
+    "type": "magento2-module",
+    "version": "2.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "require": {
+        "php": "~7.2.0||~7.3.0||~7.4.0",
+        "magento/framework": "~100.0.4"
+    },
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "ITYetti\\Rotate\\": ""
+        }
+    }
+}
